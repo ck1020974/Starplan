@@ -217,7 +217,7 @@ function renderResults() {
                     <div class="exam-mini">
                         <span class="exam-sub">${sub}</span>
                         <span class="exam-lvl">${lvl}</span>
-                        <span class="exam-score">${score}</span>
+                        ${score ? `<span class="exam-score">${score}</span>` : ''}
                     </div>
                 `;
             });
