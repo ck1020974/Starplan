@@ -224,8 +224,8 @@ function renderResults() {
         }
 
         let extraText = '';
-        let cleanDeptName = (dept.dept_name || '').replace(/[（\(\[【]\s?(含?外加)\s?[）\)\]】]/g, (m, p1) => {
-            extraText = p1;
+        let cleanDeptName = (dept.dept_name || '').replace(/[（\(\[【]\s?(含?[\s\n]*外[\s\n]*加)\s?[）\)\]】]/g, (m, p1) => {
+            extraText = p1.replace(/\s+/g, '');
             return '';
         }).replace(/\s+/g, '').trim();
 
