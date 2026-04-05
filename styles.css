@@ -233,10 +233,16 @@ header {
     height: 100%;
     overflow-y: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
     align-content: start;
     padding-right: 12px;
+}
+
+@media (max-width: 800px) {
+    .scroll-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* MINI CARD DESIGN - VERTICAL LAYERED */
