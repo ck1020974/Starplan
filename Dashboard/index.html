@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校系檢索面板 | Admissions Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Decorative Background Shapes -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="glass-panel">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+                <h1>Admissions Dashboard</h1>
+            </div>
+            <div class="stats" id="result-stats">
+                載入資料中...
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Sidebar Filters -->
+            <aside class="filters glass-panel">
+                <h2 class="filter-title">篩選工具</h2>
+
+                <!-- 1. Search Box (Top) -->
+                <div class="filter-group search-group">
+                    <div class="search-box-standalone">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                        <input type="text" id="search-input" placeholder="搜尋學校或系所...">
+                    </div>
+                </div>
+
+                <!-- 2. Popular Schools (No Label) -->
+                <div class="filter-group school-fast-links">
+                    <div class="pill-container school-pills" id="popular-schools-list">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+
+                <!-- 3. 8-Groups (Collapsible) -->
+                <div class="filter-group collapsible-group">
+                    <div class="collapse-header" onclick="toggleCollapse('filter-8-groups-container')">
+                        <span class="label-text">八大類學群</span>
+                        <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </div>
+                    <div class="collapse-content" id="filter-8-groups-container">
+                        <div class="pill-container" id="filter-8-groups">
+                            <!-- Injected via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. 18-Groups (Collapsible) -->
+                <div class="filter-group collapsible-group">
+                    <div class="collapse-header" onclick="toggleCollapse('filter-18-groups-container')">
+                        <span class="label-text">十八學群</span>
+                        <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </div>
+                    <div class="collapse-content" id="filter-18-groups-container">
+                        <div class="pill-container" id="filter-18-groups">
+                            <!-- Injected via JS -->
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Results Area -->
+            <main class="results-area">
+                <div id="results-container" class="scroll-container">
+                    <!-- Cards injected via JS -->
+                    <div class="loading-spinner">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
