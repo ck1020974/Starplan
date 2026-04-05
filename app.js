@@ -182,7 +182,7 @@ function renderResults() {
         return;
     }
 
-    const LIMIT = 150;
+    const LIMIT = 800;
     const items = filteredData.slice(0, LIMIT);
 
     let html = '';
