@@ -31,7 +31,7 @@ const LEVEL_MAP = {
 // Initialize App
 async function initApp() {
     try {
-        const response = await fetch('../all_departments.json');
+        const response = await fetch('./all_departments.json');
         if (!response.ok) throw new Error('Failed to load data');
 
         allDepartments = await response.json();
