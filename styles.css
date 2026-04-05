@@ -57,6 +57,13 @@ header {
     border-bottom: 2px solid var(--primary);
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
 .logo h1 {
     font-size: 1.2rem;
     font-weight: 800;
@@ -73,7 +80,7 @@ header {
 
 /* Sidebar */
 .filters {
-    width: 260px;
+    width: 220px;
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -226,7 +233,7 @@ header {
     height: 100%;
     overflow-y: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 16px;
     align-content: start;
     padding-right: 12px;
