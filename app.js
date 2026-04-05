@@ -170,7 +170,7 @@ function applyFilters() {
         if (active8Group && dept.department_group !== active8Group) return false;
         if (active18Group && (!dept.eighteen_groups || !dept.eighteen_groups.includes(active18Group))) return false;
         return true;
-    });
+    }).sort((a, b) => (a.dept_code || '').localeCompare(b.dept_code || ''));
     renderResults();
 }
 
